@@ -1,0 +1,114 @@
+id: wh40k
+name: Warhammer 40,000
+version: 1
+
+entities:
+  character:
+    stats:
+      - key: ws
+        label: WS
+        type: integer
+        min: 1
+        max: 10
+      - key: bs
+        label: BS
+        type: integer
+        min: 1
+        max: 10
+      - key: s
+        label: S
+        type: integer
+        min: 1
+        max: 10
+      - key: t
+        label: T
+        type: integer
+        min: 1
+        max: 10
+      - key: w
+        label: W
+        type: integer
+        min: 1
+        max: 20
+      - key: i
+        label: I
+        type: integer
+        min: 1
+        max: 10
+      - key: a
+        label: A
+        type: integer
+        min: 1
+        max: 10
+      - key: ld
+        label: Ld
+        type: integer
+        min: 1
+        max: 10
+      - key: sv
+        label: Sv
+        type: string
+    hp:
+      current: wounds-current
+      max: w
+    fields:
+      - key: faction
+        label: Faction
+        type: string
+      - key: unit-type
+        label: Unit type
+        type: string
+      - key: squad-size
+        label: Squad size
+        type: integer
+      - key: points
+        label: Points cost
+        type: integer
+      - key: wargear
+        label: Wargear
+        type: string
+      - key: special-rules
+        label: Special rules
+        type: string
+
+  unit:
+    fields:
+      - key: faction
+        label: Faction
+        type: string
+      - key: squad-size
+        label: Squad size
+        type: integer
+      - key: points
+        label: Points cost
+        type: integer
+      - key: wargear
+        label: Wargear
+        type: string
+
+combat:
+  dice: d6
+  initiative: i
+  turnOrder: alternating
+  hpTracking: true
+  moraleTest: ld
+
+arcFields:
+  - key: role
+    label: Role
+  - key: faction
+    label: Faction
+  - key: agenda
+    label: Agenda
+  - key: wants-from-party
+    label: Wants from warband
+
+npcFields:
+  - key: role
+    label: Role
+  - key: faction
+    label: Faction
+  - key: agenda
+    label: Agenda
+  - key: threat-level
+    label: Threat level
