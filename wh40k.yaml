@@ -112,3 +112,76 @@ npcFields:
     label: Agenda
   - key: threat-level
     label: Threat level
+
+archetypes:
+  - id: assault
+    label: Assault (close combat)
+    boost: [ws, s]
+    dump: [bs, ld]
+    traits:
+      - Covered in close-combat trophies
+      - Eager to close the distance
+      - Bears ritual scars of their chapter or clan
+      - Speaks only in battle-cant
+  - id: marksman
+    label: Marksman (ranged specialist)
+    boost: [bs, i]
+    dump: [ws, s]
+    traits:
+      - Maintains their weapon obsessively
+      - Calm, measured, patient
+      - Counts kills under their breath
+      - Distrusts close quarters
+  - id: heavy
+    label: Heavy (durable, tough)
+    boost: [t, w]
+    dump: [i, bs]
+    traits:
+      - Moves slowly but inexorably
+      - Plated in heavy armour
+      - Bellows orders or threats
+      - Has shrugged off wounds that fell others
+  - id: leader
+    label: Leader (commander)
+    boost: [ld, ws]
+    dump: [t, i]
+    traits:
+      - Carries an honour banner or relic
+      - Speaks with absolute authority
+      - Inspires fervour in subordinates
+      - Has a grand, possibly doomed, plan
+  - id: psyker
+    label: Psyker (warp-touched)
+    boost: [ld, i]
+    dump: [s, t]
+    traits:
+      - Eyes flicker with unnatural light
+      - Other troops give them a wide berth
+      - Whispers to things that aren't there
+      - The air grows cold around them
+
+conditions:
+  - name: Pinned
+    effect: Must stay in cover, can't move or shoot normally until they pass a pinning test or rally.
+    duration: Until rallied
+  - name: Falling Back
+    effect: Unit retreats from combat; generally can't shoot or charge that turn.
+    duration: One turn
+  - name: Battle-shocked
+    effect: Objective control reduced; may fail morale-linked actions. Represents wavering resolve.
+    duration: Until end of turn / test
+  - name: Engaged
+    effect: Locked in melee. Can't shoot most weapons; must fight or fall back.
+    duration: Until combat ends
+  - name: Suppressed
+    effect: Reduced accuracy and may be unable to advance under heavy fire.
+    duration: Until cleared
+  - name: Wounded
+    effect: Reduced effectiveness as Wounds drop; some units degrade their profile at wound thresholds.
+    duration: Until healed
+  - name: Out of Command
+    effect: Beyond the leadership range of a commander; suffers penalties to morale and orders.
+    duration: Until back in range
+  - name: Broken
+    effect: Failed morale badly; flees or is removed depending on edition rules.
+    duration: Until rallied
