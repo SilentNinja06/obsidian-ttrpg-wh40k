@@ -1,0 +1,4 @@
+
+# System packs live in their own repos
+*.yaml
+!manifest.json
